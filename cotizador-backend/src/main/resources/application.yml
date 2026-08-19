@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: cotizador-backend
+  datasource:
+    # Puerto 5433: 5432 está tomado por un servicio Postgres nativo de Windows en esta máquina.
+    url: jdbc:postgresql://localhost:5433/cotizador
+    username: cotizador
+    password: cotizador
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080

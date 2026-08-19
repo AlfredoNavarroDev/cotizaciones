@@ -51,6 +51,16 @@ Confirmado en `cotizador-backend/pom.xml`: Spring Boot 4.1.0, Java 21, `spring-b
 - `montoPagado` = suma de `monto` de los pagos.
 - `saldoPendiente` = `total - montoPagado`.
 
+### 4.1 Detalle de campos por entidad
+
+- **ConfiguracionEmisor** — fila única, `id` fijo `1L` (singleton por convención de service, sin constraint extra en DB). `nombreRazonSocial`, `rucDni`, `telefono` (`String`, `@NotBlank`), `email` (`String`, `@NotBlank`), `direccion` (`String`, opcional).
+- **Cliente** — `nombre` (`@NotBlank`), `empresa` (opcional), `rucDni` (`@NotBlank`, **unique**), `telefono`, `email`.
+- **RolTarifa** — `nombre` (`@NotBlank`), `tarifaMinima`/`tarifaMaxima` (`BigDecimal`, `@NotNull`), `activo` (`Boolean`, default `true`, soft-delete — nunca se borra físico porque `ItemCotizacion` puede referenciarlo).
+- **PlanSoporte** — `nombre` (`@NotBlank`), `descripcion`, `precioMensual` (`BigDecimal`, `@NotNull`), `activo` (`Boolean`, default `true`, mismo patrón de soft-delete que `RolTarifa`).
+- **Cotizacion** — `numero` (`String`, **unique**, autogenerado `COT-AAAA-NNN`; `NNN` es **correlativo global**, no reinicia por año — el año en el número refleja el año de creación pero el contador nunca vuelve a 001). `fecha` (`LocalDate`, asignada al crear). `cliente` (FK `@NotNull`). `validezDias` (`Integer`, `@NotNull`). `moneda` fija `"PEN"`, no editable vía API. `incluyeIGV` (`Boolean`, `@NotNull`, **sin default** — se fija explícito al crear). `estado` (enum `BORRADOR`/`ENVIADA`/`ACEPTADA`/`RECHAZADA`, **default `BORRADOR`** al crear). `planSoporte` (FK opcional). `tarifaSoporteFueraGarantia` (`BigDecimal`, opcional). `notasCostosNoIncluidos` (`String`, opcional).
+- **ItemCotizacion** (pertenece a `Cotizacion`) — `cotizacion` (FK `@NotNull`). `nombreFase` (`@NotBlank`). `descripcionTecnica` (`List<String>` vía `@ElementCollection`, bullets). `plazoSemanas` (`Integer`, `@NotNull`). `rolTarifa` (FK opcional; si el rol referenciado se inactiva, el item **conserva la referencia sin cambios** — el precio final ya está fijado y no depende del estado del rol). `precioFinal` (`BigDecimal`, `@NotNull`).
+- **Pago** (pertenece a `Cotizacion`) — `cotizacion` (FK `@NotNull`). `monto` (`BigDecimal`, `@NotNull`). `fecha` (`LocalDate`, `@NotNull`). `metodo` (**enum** `TRANSFERENCIA`/`YAPE`/`OTRO`). `nota` (opcional).
+
 ## 5. API REST (backend)
 
 CRUD estándar sobre cada entidad principal, más un endpoint agregado para el detalle completo de una cotización:
@@ -100,3 +110,6 @@ Alcance acotado por tratarse de un proyecto personal:
 - Postgres vía Docker, orquestado junto con backend y frontend en un solo `docker-compose.yml`.
 - Se agrega seguimiento de pagos (entidad `Pago`) además de solo mostrar condiciones de pago en el PDF.
 - Datos del emisor editables desde la app (`ConfiguracionEmisor`, fila única), no hardcodeados en la plantilla del PDF.
+- `Cotizacion.numero` (`COT-AAAA-NNN`): `NNN` correlativo global, no reinicia por año.
+- `RolTarifa` y `PlanSoporte` usan soft-delete (`activo`), nunca DELETE físico — protege el historial de cotizaciones que ya los referencian.
+- Frontend inicializado con `create-next-app` (TypeScript, App Router, Tailwind, `src/`) y `@react-pdf/renderer` instalado.

@@ -1,0 +1,38 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: cotizador
+      POSTGRES_USER: cotizador
+      POSTGRES_PASSWORD: cotizador
+    ports:
+      # Host 5433 -> contenedor 5432: 5432 ya está tomado por un Postgres nativo de Windows
+      # corriendo como servicio, y ambos compitiendo en el mismo puerto rompe la conexión del backend.
+      - "5433:5432"
+    volumes:
+      - cotizador_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cotizador -d cotizador"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./cotizador-backend
+    ports:
+      - "8080:8080"
+    environment:
+      # Dentro de la red de compose no hay conflicto de puerto 5432 (eso solo pasa en el host),
+      # así que el backend le habla a postgres por el puerto interno del contenedor.
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/cotizador
+      SPRING_DATASOURCE_USERNAME: cotizador
+      SPRING_DATASOURCE_PASSWORD: cotizador
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  # frontend: se agrega cuando exista Dockerfile en frontend/ (spec §7, aún pendiente).
+
+volumes:
+  cotizador_postgres_data:
