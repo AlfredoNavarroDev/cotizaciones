@@ -1,0 +1,94 @@
+- generic [active] [ref=f21e1]:
+  - generic [ref=f21e2]:
+    - complementary [ref=f21e3]:
+      - generic [ref=f21e4]: Cotizador
+      - separator [ref=f21e5]
+      - navigation [ref=f21e6]:
+        - link "Cotizaciones" [ref=f21e7] [cursor=pointer]:
+          - /url: /cotizaciones
+        - link "Clientes" [ref=f21e8] [cursor=pointer]:
+          - /url: /clientes
+        - link "Tarifario" [ref=f21e9] [cursor=pointer]:
+          - /url: /tarifario
+        - link "Planes de Soporte" [ref=f21e10] [cursor=pointer]:
+          - /url: /planes-soporte
+        - link "Mis Datos" [ref=f21e11] [cursor=pointer]:
+          - /url: /configuracion
+      - separator [ref=f21e12]
+      - button "Tema" [disabled]
+    - main [ref=f21e13]:
+      - generic [ref=f21e14]:
+        - generic [ref=f21e15]:
+          - generic [ref=f21e16]:
+            - generic [ref=f21e17]:
+              - heading "COT-2026-003" [level=1] [ref=f21e18]
+              - generic [ref=f21e19]: Borrador
+            - paragraph [ref=f21e20]: Empresa Demo SAC · 2026-08-19 · Validez 15 días
+          - generic [ref=f21e21]:
+            - button "PDF corto" [ref=f21e22]
+            - button "PDF detallado" [ref=f21e23]
+            - button "Editar" [ref=f21e24] [cursor=pointer]
+            - button "Eliminar cotización" [ref=f21e25]
+        - generic [ref=f21e26]:
+          - heading "Fases / módulos" [level=2] [ref=f21e27]
+          - table [ref=f21e29]:
+            - rowgroup [ref=f21e30]:
+              - row [ref=f21e31]:
+                - columnheader "Fase" [ref=f21e32]
+                - columnheader "Descripción" [ref=f21e33]
+                - columnheader "Plazo" [ref=f21e34]
+                - columnheader "Precio" [ref=f21e35]
+            - rowgroup [ref=f21e36]:
+              - row [ref=f21e37]:
+                - cell "Análisis y diseño" [ref=f21e38]
+                - cell [ref=f21e39]:
+                  - list [ref=f21e40]:
+                    - listitem [ref=f21e41]: Levantamiento de requerimientos
+                    - listitem [ref=f21e42]: Wireframes y arquitectura
+                - cell "2 semanas" [ref=f21e43]
+                - cell "S/ 2000.00" [ref=f21e44]
+              - row [ref=f21e45]:
+                - cell "Desarrollo e integración" [ref=f21e46]
+                - cell [ref=f21e47]:
+                  - list [ref=f21e48]:
+                    - listitem [ref=f21e49]: API REST y base de datos
+                    - listitem [ref=f21e50]: Panel administrativo
+                - cell "6 semanas" [ref=f21e51]
+                - cell "S/ 8000.00" [ref=f21e52]
+        - generic [ref=f21e53]:
+          - generic [ref=f21e54]:
+            - generic [ref=f21e55]: Subtotal
+            - generic [ref=f21e56]: S/ 10000.00
+          - generic [ref=f21e57]:
+            - generic [ref=f21e58]: IGV (18%)
+            - generic [ref=f21e59]: S/ 1800.00
+          - generic [ref=f21e60]:
+            - generic [ref=f21e61]: Total
+            - generic [ref=f21e62]: S/ 11800.00
+          - generic [ref=f21e63]:
+            - generic [ref=f21e64]: Pagado
+            - generic [ref=f21e65]: S/ 0.00
+          - generic [ref=f21e66]:
+            - generic [ref=f21e67]: Saldo pendiente
+            - generic [ref=f21e68]: S/ 11800.00
+        - generic [ref=f21e69]:
+          - heading "Pagos" [level=2] [ref=f21e70]
+          - paragraph [ref=f21e71]: Todavía no hay pagos registrados.
+          - generic [ref=f21e72]:
+            - generic [ref=f21e73]:
+              - generic [ref=f21e74]: Monto (S/) *
+              - spinbutton "Monto (S/) *" [ref=f21e75]
+            - generic [ref=f21e76]:
+              - generic [ref=f21e77]: Fecha *
+              - textbox "Fecha *" [ref=f21e78]: 2026-08-20
+            - generic [ref=f21e79]:
+              - generic [ref=f21e80]: Método *
+              - combobox "Método *" [ref=f21e81]:
+                - generic [ref=f21e82]: TRANSFERENCIA
+                - img: ▼
+              - textbox [ref=f21e83]: TRANSFERENCIA
+            - generic [ref=f21e84]:
+              - generic [ref=f21e85]: Nota
+              - textbox "Nota" [ref=f21e86]
+            - button "Agregar pago" [ref=f21e87]
+  - button "Open Next.js Dev Tools" [ref=f21e93] [cursor=pointer]

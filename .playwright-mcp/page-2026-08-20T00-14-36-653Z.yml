@@ -1,0 +1,45 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]: Cotizador
+      - separator [ref=e5]
+      - navigation [ref=e6]:
+        - link "Cotizaciones" [ref=e7] [cursor=pointer]:
+          - /url: /cotizaciones
+        - link "Clientes" [ref=e8] [cursor=pointer]:
+          - /url: /clientes
+        - link "Tarifario" [ref=e9] [cursor=pointer]:
+          - /url: /tarifario
+        - link "Planes de Soporte" [ref=e10] [cursor=pointer]:
+          - /url: /planes-soporte
+        - link "Mis Datos" [ref=e11] [cursor=pointer]:
+          - /url: /configuracion
+      - separator [ref=e12]
+      - button "Modo oscuro" [ref=e44]
+    - main [ref=e13]:
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - heading "Clientes" [level=1] [ref=e48]
+          - button "Nuevo cliente" [ref=e49] [cursor=pointer]
+        - table [ref=e51]:
+          - rowgroup [ref=e52]:
+            - row [ref=e53]:
+              - columnheader "Nombre" [ref=e54]
+              - columnheader "Empresa" [ref=e55]
+              - columnheader "RUC / DNI" [ref=e56]
+              - columnheader "Teléfono" [ref=e57]
+              - columnheader "Email" [ref=e58]
+              - columnheader "Acciones" [ref=e59]
+          - rowgroup [ref=e60]:
+            - row [ref=e61]:
+              - cell "Empresa Demo SAC" [ref=e62]
+              - cell "—" [ref=e63]
+              - cell "20601234567" [ref=e64]
+              - cell "—" [ref=e65]
+              - cell "—" [ref=e66]
+              - cell [ref=e67]:
+                - generic [ref=e68]:
+                  - button "Editar" [ref=e69] [cursor=pointer]
+                  - button "Eliminar" [ref=e70]
+  - button "Open Next.js Dev Tools" [ref=e40] [cursor=pointer]
+  - alert [ref=e45]

@@ -1,0 +1,79 @@
+- generic [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - complementary [ref=f2e3]:
+      - generic [ref=f2e4]: Cotizador
+      - separator [ref=f2e5]
+      - navigation [ref=f2e6]:
+        - link "Cotizaciones" [ref=f2e7] [cursor=pointer]:
+          - /url: /cotizaciones
+        - link "Clientes" [ref=f2e8] [cursor=pointer]:
+          - /url: /clientes
+        - link "Tarifario" [ref=f2e9] [cursor=pointer]:
+          - /url: /tarifario
+        - link "Planes de Soporte" [ref=f2e10] [cursor=pointer]:
+          - /url: /planes-soporte
+        - link "Mis Datos" [ref=f2e11] [cursor=pointer]:
+          - /url: /configuracion
+      - separator [ref=f2e12]
+      - button "Modo oscuro" [ref=f2e13]
+    - main [ref=f2e14]:
+      - generic [ref=f2e27]:
+        - heading "Nueva cotización" [level=1] [ref=f2e28]
+        - generic [ref=f2e29]:
+          - generic [ref=f2e30]:
+            - generic [ref=f2e31]:
+              - generic [ref=f2e32]: Cliente *
+              - combobox "Cliente *" [active] [ref=f2e33]:
+                - generic [ref=f2e34]: "5"
+                - img: ▼
+              - textbox [ref=f2e35]: "5"
+            - generic [ref=f2e36]:
+              - generic [ref=f2e37]: Validez (días) *
+              - spinbutton "Validez (días) *" [ref=f2e38]: "15"
+            - generic [ref=f2e39]:
+              - switch "Incluye IGV (18%)" [ref=f2e40]
+              - checkbox [ref=f2e41]
+              - generic [ref=f2e42]: Incluye IGV (18%)
+            - generic [ref=f2e43]:
+              - generic [ref=f2e44]: Plan de soporte post-venta
+              - combobox "Plan de soporte post-venta" [ref=f2e45]:
+                - generic [ref=f2e46]: ninguno
+                - img: ▼
+              - textbox [ref=f2e47]: ninguno
+            - generic [ref=f2e48]:
+              - generic [ref=f2e49]: Tarifa de soporte fuera de garantía (S/ por hora)
+              - spinbutton "Tarifa de soporte fuera de garantía (S/ por hora)" [ref=f2e50]
+            - generic [ref=f2e51]:
+              - generic [ref=f2e52]: Notas de costos no incluidos
+              - textbox "Notas de costos no incluidos" [ref=f2e53]
+          - generic [ref=f2e54]:
+            - heading "Fases / módulos" [level=2] [ref=f2e55]
+            - generic [ref=f2e56]:
+              - generic [ref=f2e57]:
+                - generic [ref=f2e58]: Fase 1
+                - button "Quitar" [ref=f2e59]
+              - generic [ref=f2e60]:
+                - generic [ref=f2e61]: Nombre de la fase *
+                - textbox "Nombre de la fase *" [ref=f2e62]
+              - generic [ref=f2e63]:
+                - generic [ref=f2e64]: Descripción técnica (una línea por bullet)
+                - textbox "Descripción técnica (una línea por bullet)" [ref=f2e65]
+              - generic [ref=f2e66]:
+                - generic [ref=f2e67]:
+                  - generic [ref=f2e68]: Plazo (semanas) *
+                  - spinbutton "Plazo (semanas) *" [ref=f2e69]
+                - generic [ref=f2e70]:
+                  - generic [ref=f2e71]: Precio final (S/) *
+                  - spinbutton "Precio final (S/) *" [ref=f2e72]
+              - generic [ref=f2e73]:
+                - generic [ref=f2e74]: Rol de tarifario (sugerencia de precio)
+                - combobox "Rol de tarifario (sugerencia de precio)" [ref=f2e75]:
+                  - generic [ref=f2e76]: ninguno
+                  - img: ▼
+                - textbox [ref=f2e77]: ninguno
+            - button "Agregar fase" [ref=f2e78]
+          - generic [ref=f2e79]:
+            - button "Guardar" [ref=f2e80]
+            - button "Cancelar" [ref=f2e81]
+  - button "Open Next.js Dev Tools" [ref=f2e22] [cursor=pointer]
+  - alert [ref=f2e26]

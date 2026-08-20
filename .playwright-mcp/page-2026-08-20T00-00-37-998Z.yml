@@ -1,0 +1,101 @@
+- generic [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - complementary [ref=f2e3]:
+      - generic [ref=f2e4]: Cotizador
+      - separator [ref=f2e5]
+      - navigation [ref=f2e6]:
+        - link [ref=f2e153] [cursor=pointer]:
+          - /url: /cotizaciones
+          - text: Cotizaciones
+        - link [ref=f2e154] [cursor=pointer]:
+          - /url: /clientes
+          - text: Clientes
+        - link [ref=f2e155] [cursor=pointer]:
+          - /url: /tarifario
+          - text: Tarifario
+        - link [ref=f2e156] [cursor=pointer]:
+          - /url: /planes-soporte
+          - text: Planes de Soporte
+        - link [ref=f2e157] [cursor=pointer]:
+          - /url: /configuracion
+          - text: Mis Datos
+      - separator [ref=f2e12]
+      - button [ref=f2e158]: Modo oscuro
+    - main [ref=f2e14]:
+      - generic [ref=f2e90]:
+        - generic [ref=f2e91]:
+          - generic [ref=f2e92]:
+            - generic [ref=f2e93]:
+              - heading [level=1] [ref=f2e159]: COT-2026-002
+              - generic [ref=f2e95]: Borrador
+            - paragraph [ref=f2e96]: Cliente Prueba PDF · 2026-08-19 · Validez 15 días
+          - generic [ref=f2e97]:
+            - button [expanded] [ref=f2e160]: PDF corto
+            - button [ref=f2e161]: PDF detallado
+            - button [ref=f2e162] [cursor=pointer]: Editar
+            - button [ref=f2e163]: Eliminar cotización
+        - generic [ref=f2e102]:
+          - heading [level=2] [ref=f2e164]: Fases / módulos
+          - table [ref=f2e105]:
+            - rowgroup [ref=f2e106]:
+              - row [ref=f2e165]:
+                - columnheader [ref=f2e166]: Fase
+                - columnheader [ref=f2e167]: Descripción
+                - columnheader [ref=f2e168]: Plazo
+                - columnheader [ref=f2e169]: Precio
+            - rowgroup [ref=f2e112]:
+              - row [ref=f2e170]:
+                - cell [ref=f2e171]: Desarrollo MVP
+                - cell [ref=f2e172]:
+                  - list [ref=f2e116]:
+                    - listitem [ref=f2e117]: Backend API
+                    - listitem [ref=f2e118]: Frontend dashboard
+                - cell [ref=f2e173]: 4 semanas
+                - cell [ref=f2e174]: S/ 5000.00
+        - generic [ref=f2e121]:
+          - generic [ref=f2e122]:
+            - generic [ref=f2e123]: Subtotal
+            - generic [ref=f2e124]: S/ 5000.00
+          - generic [ref=f2e125]:
+            - generic [ref=f2e126]: Total
+            - generic [ref=f2e127]: S/ 5000.00
+          - generic [ref=f2e128]:
+            - generic [ref=f2e129]: Pagado
+            - generic [ref=f2e130]: S/ 0.00
+          - generic [ref=f2e131]:
+            - generic [ref=f2e132]: Saldo pendiente
+            - generic [ref=f2e133]: S/ 5000.00
+        - generic [ref=f2e134]:
+          - heading [level=2] [ref=f2e175]: Pagos
+          - paragraph [ref=f2e136]: Todavía no hay pagos registrados.
+          - generic [ref=f2e137]:
+            - generic [ref=f2e138]:
+              - generic [ref=f2e139]: Monto (S/) *
+              - spinbutton [ref=f2e176]
+            - generic [ref=f2e141]:
+              - generic [ref=f2e142]: Fecha *
+              - textbox [ref=f2e177]: 2026-08-20
+            - generic [ref=f2e144]:
+              - generic [ref=f2e145]: Método *
+              - combobox [ref=f2e178]:
+                - generic [ref=f2e147]: TRANSFERENCIA
+                - img: ▼
+              - textbox [ref=f2e148]: TRANSFERENCIA
+            - generic [ref=f2e149]:
+              - generic [ref=f2e150]: Nota
+              - textbox [ref=f2e179]
+            - button [ref=f2e180]: Agregar pago
+  - button "Open Next.js Dev Tools" [ref=f2e181] [cursor=pointer]:
+    - generic [ref=f2e184]:
+      - text: Compiling
+      - generic [ref=f2e185]:
+        - generic [ref=f2e186]: .
+        - generic [ref=f2e187]: .
+        - generic [ref=f2e188]: .
+  - alert [ref=f2e26]: COT-2026-002
+  - dialog [ref=f2e192]:
+    - heading "PDF corto · COT-2026-002" [level=2] [ref=f2e194]
+    - iframe [active] [ref=f2e195]:
+      
+    - button "Descargar" [ref=f2e197] [cursor=pointer]
+    - button "Close" [ref=f2e198]

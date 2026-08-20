@@ -1,0 +1,20 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary [ref=f1e3]:
+      - generic [ref=f1e4]: Cotizador
+      - separator [ref=f1e5]
+      - navigation [ref=f1e6]:
+        - link "Cotizaciones" [ref=f1e7] [cursor=pointer]:
+          - /url: /cotizaciones
+        - link "Clientes" [ref=f1e8] [cursor=pointer]:
+          - /url: /clientes
+        - link "Tarifario" [ref=f1e9] [cursor=pointer]:
+          - /url: /tarifario
+        - link "Planes de Soporte" [ref=f1e10] [cursor=pointer]:
+          - /url: /planes-soporte
+        - link "Mis Datos" [ref=f1e11] [cursor=pointer]:
+          - /url: /configuracion
+      - separator [ref=f1e12]
+      - button "Tema" [disabled]
+    - main [ref=f1e13]
+  - button "Open Next.js Dev Tools" [ref=f1e21] [cursor=pointer]

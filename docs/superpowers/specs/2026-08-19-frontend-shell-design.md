@@ -62,6 +62,7 @@ Cada página placeholder muestra el nombre de la sección y un texto "Próximame
 - El resto de primitivas (`table`, `dialog`, `form`, `input`, etc.) se instalan cuando el sub-spec que las necesita las pide — no se preinstala todo de una.
 - `Sidebar` (`components/sidebar.tsx`): client component, lista las 5 secciones con sus rutas, resalta la activa comparando con `usePathname()`.
 - Tema claro/oscuro con toggle: `next-themes` (`ThemeProvider attribute="class"`) + botón de toggle en el sidebar. Paleta base `neutral` (ver nota de implementación arriba), un solo color de acento vía `--color-primary` (default de shadcn).
+- **Gotcha Base UI (no Radix):** esta instalación de shadcn usa `@base-ui/react`, no Radix — la composición es con prop `render`, no `asChild` (ej. `<Button render={<Link href="..." />}>`). El `Button` de Base UI espera por default un `<button>` nativo (`nativeButton` default `true`); al componerlo con `Link` (que renderiza `<a>`) hay que pasar explícitamente `nativeButton={false}`, si no tira error en consola en dev. Mismo patrón aplica a cualquier trigger (`AlertDialogTrigger`, etc.) compuesto con un elemento no-`<button>`.
 - Gotcha conocido: `shadcn init` sobreescribe `globals.css` y puede introducir `--font-sans: var(--font-sans)` (referencia circular que rompe Geist en Tailwind v4). Después del init, reemplazar por nombres literales (`--font-sans: "Geist", ...`) y mover las clases de variable de fuente de `<body>` a `<html>` en `layout.tsx`.
 
 ## 6. Manejo de errores y loading

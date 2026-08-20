@@ -1,0 +1,57 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary [ref=f1e3]:
+      - generic [ref=f1e4]: Cotizador
+      - separator [ref=f1e5]
+      - navigation [ref=f1e6]:
+        - link [ref=f1e124] [cursor=pointer]:
+          - /url: /cotizaciones
+          - text: Cotizaciones
+        - link [ref=f1e125] [cursor=pointer]:
+          - /url: /clientes
+          - text: Clientes
+        - link [ref=f1e126] [cursor=pointer]:
+          - /url: /tarifario
+          - text: Tarifario
+        - link [ref=f1e127] [cursor=pointer]:
+          - /url: /planes-soporte
+          - text: Planes de Soporte
+        - link [ref=f1e128] [cursor=pointer]:
+          - /url: /configuracion
+          - text: Mis Datos
+      - separator [ref=f1e12]
+      - button [ref=f1e129]: Modo oscuro
+    - main [ref=f1e13]:
+      - generic [ref=f1e99]:
+        - generic [ref=f1e100]:
+          - heading [level=1] [ref=f1e130]: Clientes
+          - button [ref=f1e131] [cursor=pointer]: Nuevo cliente
+        - table [ref=f1e104]:
+          - rowgroup [ref=f1e105]:
+            - row [ref=f1e132]:
+              - columnheader [ref=f1e133]: Nombre
+              - columnheader [ref=f1e134]: Empresa
+              - columnheader [ref=f1e135]: RUC / DNI
+              - columnheader [ref=f1e136]: Teléfono
+              - columnheader [ref=f1e137]: Email
+              - columnheader [ref=f1e138]: Acciones
+          - rowgroup [ref=f1e113]:
+            - row [ref=f1e139]:
+              - cell [ref=f1e140]: Cliente Editado
+              - cell [ref=f1e141]: —
+              - cell [ref=f1e142]: "12345678"
+              - cell [ref=f1e143]: —
+              - cell [ref=f1e144]: prueba@example.com
+              - cell [ref=f1e145]:
+                - generic [ref=f1e121]:
+                  - button [ref=f1e146] [cursor=pointer]: Editar
+                  - button [expanded] [ref=f1e147]: Eliminar
+  - button "Open Next.js Dev Tools" [ref=f1e21] [cursor=pointer]
+  - alert [ref=f1e31]: Cotizador
+  - alertdialog [ref=f1e151]:
+    - generic [ref=f1e152]:
+      - heading "¿Eliminar a Cliente Editado?" [level=2] [ref=f1e153]
+      - paragraph [ref=f1e154]: Esta acción no se puede deshacer.
+    - generic [ref=f1e155]:
+      - button "Cancelar" [active] [ref=f1e156]
+      - button "Eliminar" [ref=f1e157]

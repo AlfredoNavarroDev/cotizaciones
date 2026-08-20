@@ -1,0 +1,26 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary [ref=f1e3]:
+      - generic [ref=f1e4]: Cotizador
+      - separator [ref=f1e5]
+      - navigation [ref=f1e6]:
+        - link "Cotizaciones" [ref=f1e159] [cursor=pointer]:
+          - /url: /cotizaciones
+        - link "Clientes" [ref=f1e160] [cursor=pointer]:
+          - /url: /clientes
+        - link "Tarifario" [ref=f1e161] [cursor=pointer]:
+          - /url: /tarifario
+        - link "Planes de Soporte" [ref=f1e162] [cursor=pointer]:
+          - /url: /planes-soporte
+        - link "Mis Datos" [ref=f1e163] [cursor=pointer]:
+          - /url: /configuracion
+      - separator [ref=f1e12]
+      - button "Modo oscuro" [ref=f1e164]
+    - main [ref=f1e13]:
+      - generic [ref=f1e99]:
+        - generic [ref=f1e100]:
+          - heading "Clientes" [level=1] [ref=f1e165]
+          - button "Nuevo cliente" [ref=f1e166] [cursor=pointer]
+        - paragraph [ref=f1e167]: Todavía no hay clientes.
+  - button "Open Next.js Dev Tools" [ref=f1e21] [cursor=pointer]
+  - alert [ref=f1e31]: Cotizador

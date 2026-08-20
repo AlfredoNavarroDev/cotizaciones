@@ -1,0 +1,107 @@
+- generic [ref=f21e1]:
+  - generic [ref=f21e2]:
+    - complementary [ref=f21e3]:
+      - generic [ref=f21e4]: Cotizador
+      - separator [ref=f21e5]
+      - navigation [ref=f21e6]:
+        - link [ref=f21e99] [cursor=pointer]:
+          - /url: /cotizaciones
+          - text: Cotizaciones
+        - link [ref=f21e100] [cursor=pointer]:
+          - /url: /clientes
+          - text: Clientes
+        - link [ref=f21e101] [cursor=pointer]:
+          - /url: /tarifario
+          - text: Tarifario
+        - link [ref=f21e102] [cursor=pointer]:
+          - /url: /planes-soporte
+          - text: Planes de Soporte
+        - link [ref=f21e103] [cursor=pointer]:
+          - /url: /configuracion
+          - text: Mis Datos
+      - separator [ref=f21e12]
+      - button [ref=f21e104]: Modo oscuro
+    - main [ref=f21e13]:
+      - generic [ref=f21e14]:
+        - generic [ref=f21e15]:
+          - generic [ref=f21e16]:
+            - generic [ref=f21e17]:
+              - heading [level=1] [ref=f21e105]: COT-2026-003
+              - generic [ref=f21e19]: Borrador
+            - paragraph [ref=f21e20]: Empresa Demo SAC · 2026-08-19 · Validez 15 días
+          - generic [ref=f21e21]:
+            - button [ref=f21e106]: PDF corto
+            - button [ref=f21e107]: PDF detallado
+            - button [ref=f21e108] [cursor=pointer]: Editar
+            - button [expanded] [ref=f21e109]: Eliminar cotización
+        - generic [ref=f21e26]:
+          - heading [level=2] [ref=f21e110]: Fases / módulos
+          - table [ref=f21e29]:
+            - rowgroup [ref=f21e30]:
+              - row [ref=f21e111]:
+                - columnheader [ref=f21e112]: Fase
+                - columnheader [ref=f21e113]: Descripción
+                - columnheader [ref=f21e114]: Plazo
+                - columnheader [ref=f21e115]: Precio
+            - rowgroup [ref=f21e36]:
+              - row [ref=f21e116]:
+                - cell [ref=f21e117]: Análisis y diseño
+                - cell [ref=f21e118]:
+                  - list [ref=f21e40]:
+                    - listitem [ref=f21e41]: Levantamiento de requerimientos
+                    - listitem [ref=f21e42]: Wireframes y arquitectura
+                - cell [ref=f21e119]: 2 semanas
+                - cell [ref=f21e120]: S/ 2000.00
+              - row [ref=f21e121]:
+                - cell [ref=f21e122]: Desarrollo e integración
+                - cell [ref=f21e123]:
+                  - list [ref=f21e48]:
+                    - listitem [ref=f21e49]: API REST y base de datos
+                    - listitem [ref=f21e50]: Panel administrativo
+                - cell [ref=f21e124]: 6 semanas
+                - cell [ref=f21e125]: S/ 8000.00
+        - generic [ref=f21e53]:
+          - generic [ref=f21e54]:
+            - generic [ref=f21e55]: Subtotal
+            - generic [ref=f21e56]: S/ 10000.00
+          - generic [ref=f21e57]:
+            - generic [ref=f21e58]: IGV (18%)
+            - generic [ref=f21e59]: S/ 1800.00
+          - generic [ref=f21e60]:
+            - generic [ref=f21e61]: Total
+            - generic [ref=f21e62]: S/ 11800.00
+          - generic [ref=f21e63]:
+            - generic [ref=f21e64]: Pagado
+            - generic [ref=f21e65]: S/ 0.00
+          - generic [ref=f21e66]:
+            - generic [ref=f21e67]: Saldo pendiente
+            - generic [ref=f21e68]: S/ 11800.00
+        - generic [ref=f21e69]:
+          - heading [level=2] [ref=f21e126]: Pagos
+          - paragraph [ref=f21e71]: Todavía no hay pagos registrados.
+          - generic [ref=f21e72]:
+            - generic [ref=f21e73]:
+              - generic [ref=f21e74]: Monto (S/) *
+              - spinbutton [ref=f21e127]
+            - generic [ref=f21e76]:
+              - generic [ref=f21e77]: Fecha *
+              - textbox [ref=f21e128]: 2026-08-20
+            - generic [ref=f21e79]:
+              - generic [ref=f21e80]: Método *
+              - combobox [ref=f21e129]:
+                - generic [ref=f21e82]: TRANSFERENCIA
+                - img: ▼
+              - textbox [ref=f21e83]: TRANSFERENCIA
+            - generic [ref=f21e84]:
+              - generic [ref=f21e85]: Nota
+              - textbox [ref=f21e130]
+            - button [ref=f21e131]: Agregar pago
+  - button "Open Next.js Dev Tools" [ref=f21e93] [cursor=pointer]
+  - alert [ref=f21e98]
+  - alertdialog [ref=f21e135]:
+    - generic [ref=f21e136]:
+      - heading "¿Eliminar la cotización COT-2026-003?" [level=2] [ref=f21e137]
+      - paragraph [ref=f21e138]: Esta acción no se puede deshacer.
+    - generic [ref=f21e139]:
+      - button "Cancelar" [active] [ref=f21e140]
+      - button "Eliminar" [ref=f21e141]

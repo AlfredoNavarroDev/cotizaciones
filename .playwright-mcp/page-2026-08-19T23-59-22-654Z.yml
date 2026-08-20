@@ -1,0 +1,42 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary [ref=f1e3]:
+      - generic [ref=f1e4]: Cotizador
+      - separator [ref=f1e5]
+      - navigation [ref=f1e6]:
+        - link "Cotizaciones" [ref=f1e7] [cursor=pointer]:
+          - /url: /cotizaciones
+        - link "Clientes" [ref=f1e8] [cursor=pointer]:
+          - /url: /clientes
+        - link "Tarifario" [ref=f1e9] [cursor=pointer]:
+          - /url: /tarifario
+        - link "Planes de Soporte" [ref=f1e10] [cursor=pointer]:
+          - /url: /planes-soporte
+        - link "Mis Datos" [ref=f1e11] [cursor=pointer]:
+          - /url: /configuracion
+      - separator [ref=f1e12]
+      - button "Modo oscuro" [ref=f1e13]
+    - main [ref=f1e14]:
+      - generic [ref=f1e15]:
+        - heading "Nuevo cliente" [level=1] [ref=f1e16]
+        - generic [ref=f1e17]:
+          - generic [ref=f1e18]:
+            - generic [ref=f1e19]: Nombre *
+            - textbox "Nombre *" [ref=f1e20]
+          - generic [ref=f1e21]:
+            - generic [ref=f1e22]: Empresa
+            - textbox "Empresa" [ref=f1e23]
+          - generic [ref=f1e24]:
+            - generic [ref=f1e25]: RUC / DNI *
+            - textbox "RUC / DNI *" [ref=f1e26]
+          - generic [ref=f1e27]:
+            - generic [ref=f1e28]: Teléfono
+            - textbox "Teléfono" [ref=f1e29]
+          - generic [ref=f1e30]:
+            - generic [ref=f1e31]: Email
+            - textbox "Email" [ref=f1e32]
+          - generic [ref=f1e33]:
+            - button "Guardar" [ref=f1e34]
+            - button "Cancelar" [ref=f1e35]
+  - button "Open Next.js Dev Tools" [ref=f1e41] [cursor=pointer]
+  - alert [ref=f1e45]

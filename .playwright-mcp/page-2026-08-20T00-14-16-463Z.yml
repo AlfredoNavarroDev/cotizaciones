@@ -1,0 +1,41 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]: Cotizador
+      - separator [ref=e5]
+      - navigation [ref=e6]:
+        - link "Cotizaciones" [ref=e7] [cursor=pointer]:
+          - /url: /cotizaciones
+        - link "Clientes" [ref=e8] [cursor=pointer]:
+          - /url: /clientes
+        - link "Tarifario" [ref=e9] [cursor=pointer]:
+          - /url: /tarifario
+        - link "Planes de Soporte" [ref=e10] [cursor=pointer]:
+          - /url: /planes-soporte
+        - link "Mis Datos" [ref=e11] [cursor=pointer]:
+          - /url: /configuracion
+      - separator [ref=e12]
+      - button "Tema" [disabled]
+    - main [ref=e13]:
+      - generic [ref=e14]:
+        - heading "Nuevo cliente" [level=1] [ref=e15]
+        - generic [ref=e16]:
+          - generic [ref=e17]:
+            - generic [ref=e18]: Nombre *
+            - textbox "Nombre *" [ref=e19]
+          - generic [ref=e20]:
+            - generic [ref=e21]: Empresa
+            - textbox "Empresa" [ref=e22]
+          - generic [ref=e23]:
+            - generic [ref=e24]: RUC / DNI *
+            - textbox "RUC / DNI *" [ref=e25]
+          - generic [ref=e26]:
+            - generic [ref=e27]: Teléfono
+            - textbox "Teléfono" [ref=e28]
+          - generic [ref=e29]:
+            - generic [ref=e30]: Email
+            - textbox "Email" [ref=e31]
+          - generic [ref=e32]:
+            - button "Guardar" [ref=e33]
+            - button "Cancelar" [ref=e34]
+  - button "Open Next.js Dev Tools" [ref=e40] [cursor=pointer]

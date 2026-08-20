@@ -1,0 +1,26 @@
+- generic [active] [ref=f21e1]:
+  - generic [ref=f21e2]:
+    - complementary [ref=f21e3]:
+      - generic [ref=f21e4]: Cotizador
+      - separator [ref=f21e5]
+      - navigation [ref=f21e6]:
+        - link "Cotizaciones" [ref=f21e143] [cursor=pointer]:
+          - /url: /cotizaciones
+        - link "Clientes" [ref=f21e144] [cursor=pointer]:
+          - /url: /clientes
+        - link "Tarifario" [ref=f21e145] [cursor=pointer]:
+          - /url: /tarifario
+        - link "Planes de Soporte" [ref=f21e146] [cursor=pointer]:
+          - /url: /planes-soporte
+        - link "Mis Datos" [ref=f21e147] [cursor=pointer]:
+          - /url: /configuracion
+      - separator [ref=f21e12]
+      - button "Modo oscuro" [ref=f21e148]
+    - main [ref=f21e13]:
+      - generic [ref=f21e149]:
+        - generic [ref=f21e150]:
+          - heading "Cotizaciones" [level=1] [ref=f21e151]
+          - button "Nueva cotización" [ref=f21e152] [cursor=pointer]
+        - paragraph [ref=f21e153]: Todavía no hay cotizaciones.
+  - button "Open Next.js Dev Tools" [ref=f21e93] [cursor=pointer]
+  - alert [ref=f21e98]: Cotizaciones

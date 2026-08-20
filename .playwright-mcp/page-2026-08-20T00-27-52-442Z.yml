@@ -1,0 +1,57 @@
+- generic [ref=f22e1]:
+  - generic [ref=f22e2]:
+    - complementary [ref=f22e3]:
+      - generic [ref=f22e4]: Cotizador
+      - separator [ref=f22e5]
+      - navigation [ref=f22e6]:
+        - link [ref=f22e52] [cursor=pointer]:
+          - /url: /cotizaciones
+          - text: Cotizaciones
+        - link [ref=f22e53] [cursor=pointer]:
+          - /url: /clientes
+          - text: Clientes
+        - link [ref=f22e54] [cursor=pointer]:
+          - /url: /tarifario
+          - text: Tarifario
+        - link [ref=f22e55] [cursor=pointer]:
+          - /url: /planes-soporte
+          - text: Planes de Soporte
+        - link [ref=f22e56] [cursor=pointer]:
+          - /url: /configuracion
+          - text: Mis Datos
+      - separator [ref=f22e12]
+      - button [ref=f22e57]: Modo oscuro
+    - main [ref=f22e13]:
+      - generic [ref=f22e26]:
+        - generic [ref=f22e27]:
+          - heading [level=1] [ref=f22e58]: Clientes
+          - button [ref=f22e59] [cursor=pointer]: Nuevo cliente
+        - table [ref=f22e31]:
+          - rowgroup [ref=f22e32]:
+            - row [ref=f22e60]:
+              - columnheader [ref=f22e61]: Nombre
+              - columnheader [ref=f22e62]: Empresa
+              - columnheader [ref=f22e63]: RUC / DNI
+              - columnheader [ref=f22e64]: Teléfono
+              - columnheader [ref=f22e65]: Email
+              - columnheader [ref=f22e66]: Acciones
+          - rowgroup [ref=f22e40]:
+            - row [ref=f22e67]:
+              - cell [ref=f22e68]: Empresa Demo SAC
+              - cell [ref=f22e69]: —
+              - cell [ref=f22e70]: "20601234567"
+              - cell [ref=f22e71]: —
+              - cell [ref=f22e72]: —
+              - cell [ref=f22e73]:
+                - generic [ref=f22e48]:
+                  - button [ref=f22e74] [cursor=pointer]: Editar
+                  - button [expanded] [ref=f22e75]: Eliminar
+  - button "Open Next.js Dev Tools" [ref=f22e21] [cursor=pointer]
+  - alert [ref=f22e51]
+  - alertdialog [ref=f22e79]:
+    - generic [ref=f22e80]:
+      - heading "¿Eliminar a Empresa Demo SAC?" [level=2] [ref=f22e81]
+      - paragraph [ref=f22e82]: Esta acción no se puede deshacer.
+    - generic [ref=f22e83]:
+      - button "Cancelar" [active] [ref=f22e84]
+      - button "Eliminar" [ref=f22e85]

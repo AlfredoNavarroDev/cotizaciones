@@ -86,13 +86,15 @@ CRUD estándar sobre cada entidad principal, más un endpoint agregado para el d
 ```
 cotizaciones/
 ├── docker-compose.yml          ← postgres + backend + frontend
-├── cotizador-backend/          ← Spring Boot (ya generado con Initializr)
+├── cotizador-backend/          ← Spring Boot
 │   └── Dockerfile              ← build multi-stage (Maven → jar)
-└── frontend/                   ← Next.js (por crear)
-    └── Dockerfile              ← build multi-stage (npm → next build)
+└── frontend/                   ← Next.js
+    └── Dockerfile              ← build multi-stage (npm → next build, output standalone)
 ```
 
-`docker-compose.yml` define 3 servicios: `postgres` (imagen oficial, volumen para persistencia, puerto 5432), `backend` (build desde `cotizador-backend/`, puerto 8080, variables de entorno de conexión a `postgres`), `frontend` (build desde `frontend/`, puerto 3000, `NEXT_PUBLIC_API_URL=http://localhost:8080`).
+`docker-compose.yml` define 3 servicios: `postgres` (imagen oficial, volumen para persistencia, puerto 5433→5432 en host), `backend` (build desde `cotizador-backend/`, puerto 8080, variables de entorno de conexión a `postgres`), `frontend` (build desde `frontend/`, puerto 3000).
+
+**Nota de implementación — doble URL de API:** el browser y el server-side de Next.js (Server Components) resuelven el backend con hostnames distintos dentro de Compose. El browser corre en el host y necesita `NEXT_PUBLIC_API_URL=http://localhost:8080` (horneado en el bundle de cliente en build time, pasado como build arg). El server-side corre dentro del contenedor del frontend, donde `localhost` apunta al contenedor mismo — necesita el hostname interno de compose, `API_URL_INTERNAL=http://backend:8080` (variable de entorno normal, leída en runtime). `lib/api/client.ts` elige una u otra según `typeof window`. Fuera de Docker (`npm run dev` local) `API_URL_INTERNAL` no está definida y todo cae a `NEXT_PUBLIC_API_URL`.
 
 ## 8. Testing
 

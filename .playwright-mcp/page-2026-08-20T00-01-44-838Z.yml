@@ -1,0 +1,84 @@
+- generic [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - complementary [ref=f2e3]:
+      - generic [ref=f2e4]: Cotizador
+      - separator [ref=f2e5]
+      - navigation [ref=f2e6]:
+        - link "Cotizaciones" [ref=f2e269] [cursor=pointer]:
+          - /url: /cotizaciones
+        - link "Clientes" [ref=f2e270] [cursor=pointer]:
+          - /url: /clientes
+        - link "Tarifario" [ref=f2e271] [cursor=pointer]:
+          - /url: /tarifario
+        - link "Planes de Soporte" [ref=f2e272] [cursor=pointer]:
+          - /url: /planes-soporte
+        - link "Mis Datos" [ref=f2e273] [cursor=pointer]:
+          - /url: /configuracion
+      - separator [ref=f2e12]
+      - button "Modo oscuro" [ref=f2e274]
+    - main [ref=f2e14]:
+      - generic [ref=f2e90]:
+        - generic [ref=f2e91]:
+          - generic [ref=f2e92]:
+            - generic [ref=f2e93]:
+              - heading "COT-2026-002" [level=1] [ref=f2e275]
+              - generic [ref=f2e95]: Borrador
+            - paragraph [ref=f2e96]: Cliente Prueba PDF · 2026-08-19 · Validez 15 días
+          - generic [ref=f2e97]:
+            - button "PDF corto" [ref=f2e276]
+            - button "PDF detallado" [active] [ref=f2e277]
+            - button "Editar" [ref=f2e278] [cursor=pointer]
+            - button "Eliminar cotización" [ref=f2e279]
+        - generic [ref=f2e102]:
+          - heading "Fases / módulos" [level=2] [ref=f2e280]
+          - table [ref=f2e105]:
+            - rowgroup [ref=f2e106]:
+              - row [ref=f2e281]:
+                - columnheader "Fase" [ref=f2e282]
+                - columnheader "Descripción" [ref=f2e283]
+                - columnheader "Plazo" [ref=f2e284]
+                - columnheader "Precio" [ref=f2e285]
+            - rowgroup [ref=f2e112]:
+              - row [ref=f2e286]:
+                - cell "Desarrollo MVP" [ref=f2e287]
+                - cell [ref=f2e288]:
+                  - list [ref=f2e116]:
+                    - listitem [ref=f2e117]: Backend API
+                    - listitem [ref=f2e118]: Frontend dashboard
+                - cell "4 semanas" [ref=f2e289]
+                - cell "S/ 5000.00" [ref=f2e290]
+        - generic [ref=f2e121]:
+          - generic [ref=f2e122]:
+            - generic [ref=f2e123]: Subtotal
+            - generic [ref=f2e124]: S/ 5000.00
+          - generic [ref=f2e125]:
+            - generic [ref=f2e126]: Total
+            - generic [ref=f2e127]: S/ 5000.00
+          - generic [ref=f2e128]:
+            - generic [ref=f2e129]: Pagado
+            - generic [ref=f2e130]: S/ 0.00
+          - generic [ref=f2e131]:
+            - generic [ref=f2e132]: Saldo pendiente
+            - generic [ref=f2e133]: S/ 5000.00
+        - generic [ref=f2e134]:
+          - heading "Pagos" [level=2] [ref=f2e291]
+          - paragraph [ref=f2e136]: Todavía no hay pagos registrados.
+          - generic [ref=f2e137]:
+            - generic [ref=f2e138]:
+              - generic [ref=f2e139]: Monto (S/) *
+              - spinbutton "Monto (S/) *" [ref=f2e292]
+            - generic [ref=f2e141]:
+              - generic [ref=f2e142]: Fecha *
+              - textbox "Fecha *" [ref=f2e293]: 2026-08-20
+            - generic [ref=f2e144]:
+              - generic [ref=f2e145]: Método *
+              - combobox "Método *" [ref=f2e294]:
+                - generic [ref=f2e147]: TRANSFERENCIA
+                - img: ▼
+              - textbox [ref=f2e148]: TRANSFERENCIA
+            - generic [ref=f2e149]:
+              - generic [ref=f2e150]: Nota
+              - textbox "Nota" [ref=f2e295]
+            - button "Agregar pago" [ref=f2e296]
+  - button "Open Next.js Dev Tools" [ref=f2e22] [cursor=pointer]
+  - alert [ref=f2e26]: COT-2026-002

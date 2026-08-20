@@ -1,0 +1,57 @@
+- generic [ref=f9e1]:
+  - generic [ref=f9e2]:
+    - complementary [ref=f9e3]:
+      - generic [ref=f9e4]: Cotizador
+      - separator [ref=f9e5]
+      - navigation [ref=f9e6]:
+        - link [ref=f9e52] [cursor=pointer]:
+          - /url: /cotizaciones
+          - text: Cotizaciones
+        - link [ref=f9e53] [cursor=pointer]:
+          - /url: /clientes
+          - text: Clientes
+        - link [ref=f9e54] [cursor=pointer]:
+          - /url: /tarifario
+          - text: Tarifario
+        - link [ref=f9e55] [cursor=pointer]:
+          - /url: /planes-soporte
+          - text: Planes de Soporte
+        - link [ref=f9e56] [cursor=pointer]:
+          - /url: /configuracion
+          - text: Mis Datos
+      - separator [ref=f9e12]
+      - button [ref=f9e57]: Modo oscuro
+    - main [ref=f9e13]:
+      - generic [ref=f9e26]:
+        - generic [ref=f9e27]:
+          - heading [level=1] [ref=f9e58]: Clientes
+          - button [ref=f9e59] [cursor=pointer]: Nuevo cliente
+        - table [ref=f9e31]:
+          - rowgroup [ref=f9e32]:
+            - row [ref=f9e60]:
+              - columnheader [ref=f9e61]: Nombre
+              - columnheader [ref=f9e62]: Empresa
+              - columnheader [ref=f9e63]: RUC / DNI
+              - columnheader [ref=f9e64]: Teléfono
+              - columnheader [ref=f9e65]: Email
+              - columnheader [ref=f9e66]: Acciones
+          - rowgroup [ref=f9e40]:
+            - row [ref=f9e67]:
+              - cell [ref=f9e68]: Cliente Prueba PDF
+              - cell [ref=f9e69]: —
+              - cell [ref=f9e70]: "12345678"
+              - cell [ref=f9e71]: —
+              - cell [ref=f9e72]: —
+              - cell [ref=f9e73]:
+                - generic [ref=f9e48]:
+                  - button [ref=f9e74] [cursor=pointer]: Editar
+                  - button [expanded] [ref=f9e75]: Eliminar
+  - button "Open Next.js Dev Tools" [ref=f9e21] [cursor=pointer]
+  - alert [ref=f9e51]
+  - alertdialog [ref=f9e79]:
+    - generic [ref=f9e80]:
+      - heading "¿Eliminar a Cliente Prueba PDF?" [level=2] [ref=f9e81]
+      - paragraph [ref=f9e82]: Esta acción no se puede deshacer.
+    - generic [ref=f9e83]:
+      - button "Cancelar" [active] [ref=f9e84]
+      - button "Eliminar" [ref=f9e85]

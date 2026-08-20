@@ -1,0 +1,45 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary [ref=f1e3]:
+      - generic [ref=f1e4]: Cotizador
+      - separator [ref=f1e5]
+      - navigation [ref=f1e6]:
+        - link "Cotizaciones" [ref=f1e7] [cursor=pointer]:
+          - /url: /cotizaciones
+        - link "Clientes" [ref=f1e8] [cursor=pointer]:
+          - /url: /clientes
+        - link "Tarifario" [ref=f1e9] [cursor=pointer]:
+          - /url: /tarifario
+        - link "Planes de Soporte" [ref=f1e10] [cursor=pointer]:
+          - /url: /planes-soporte
+        - link "Mis Datos" [ref=f1e11] [cursor=pointer]:
+          - /url: /configuracion
+      - separator [ref=f1e12]
+      - button "Modo oscuro" [ref=f1e25]
+    - main [ref=f1e13]:
+      - generic [ref=f1e99]:
+        - generic [ref=f1e100]:
+          - heading "Clientes" [level=1] [ref=f1e101]
+          - button "Nuevo cliente" [ref=f1e102] [cursor=pointer]
+        - table [ref=f1e104]:
+          - rowgroup [ref=f1e105]:
+            - row [ref=f1e106]:
+              - columnheader "Nombre" [ref=f1e107]
+              - columnheader "Empresa" [ref=f1e108]
+              - columnheader "RUC / DNI" [ref=f1e109]
+              - columnheader "Teléfono" [ref=f1e110]
+              - columnheader "Email" [ref=f1e111]
+              - columnheader "Acciones" [ref=f1e112]
+          - rowgroup [ref=f1e113]:
+            - row [ref=f1e114]:
+              - cell "Cliente Editado" [ref=f1e115]
+              - cell "—" [ref=f1e116]
+              - cell "12345678" [ref=f1e117]
+              - cell "—" [ref=f1e118]
+              - cell "prueba@example.com" [ref=f1e119]
+              - cell [ref=f1e120]:
+                - generic [ref=f1e121]:
+                  - button "Editar" [ref=f1e122] [cursor=pointer]
+                  - button "Eliminar" [ref=f1e123]
+  - button "Open Next.js Dev Tools" [ref=f1e21] [cursor=pointer]
+  - alert [ref=f1e31]: Cotizador

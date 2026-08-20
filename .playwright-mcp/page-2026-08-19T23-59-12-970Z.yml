@@ -1,0 +1,25 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]: Cotizador
+      - separator [ref=e5]
+      - navigation [ref=e6]:
+        - link "Cotizaciones" [ref=e7] [cursor=pointer]:
+          - /url: /cotizaciones
+        - link "Clientes" [ref=e8] [cursor=pointer]:
+          - /url: /clientes
+        - link "Tarifario" [ref=e9] [cursor=pointer]:
+          - /url: /tarifario
+        - link "Planes de Soporte" [ref=e10] [cursor=pointer]:
+          - /url: /planes-soporte
+        - link "Mis Datos" [ref=e11] [cursor=pointer]:
+          - /url: /configuracion
+      - separator [ref=e12]
+      - button "Modo oscuro" [ref=e13]
+    - main [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - heading "Cotizaciones" [level=1] [ref=e17]
+          - button "Nueva cotización" [ref=e18] [cursor=pointer]
+        - paragraph [ref=e19]: Todavía no hay cotizaciones.
+  - alert [ref=e20]

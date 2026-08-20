@@ -32,7 +32,22 @@ services:
       postgres:
         condition: service_healthy
 
-  # frontend: se agrega cuando exista Dockerfile en frontend/ (spec §7, aún pendiente).
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # Se hornea en el bundle de cliente (NEXT_PUBLIC_*) — el browser corre en el host,
+        # así que necesita el puerto publicado, no el hostname interno de compose.
+        NEXT_PUBLIC_API_URL: http://localhost:8080
+    ports:
+      - "3000:3000"
+    environment:
+      # Server-side (Server Components) corre dentro de este contenedor: "localhost" ahí
+      # apuntaría al contenedor mismo, no al backend — usa el hostname interno de compose.
+      # Ver el comentario en frontend/src/lib/api/client.ts (apiBaseUrl()).
+      API_URL_INTERNAL: http://backend:8080
+    depends_on:
+      - backend
 
 volumes:
   cotizador_postgres_data:
